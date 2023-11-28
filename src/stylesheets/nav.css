@@ -1,0 +1,58 @@
+.nav-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4em 12em;
+    font-size: 1rem;
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    color: hsl(229, 31%, 21%);
+    gap: 4rem;
+}
+
+#--nav{
+    width: 100%;
+}
+
+#--list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+#--list li{
+    list-style-type: none;
+    letter-spacing: .1em;
+    cursor: pointer;
+} 
+
+#--list li:hover{
+    color: hsl(0, 94%, 66%);
+}
+
+#--login{
+    width: 8rem;
+    color: hsl(229, 8%, 60%);
+    letter-spacing: .1em;
+    font-weight: 600;
+    color: white;
+    padding: 1.2em 3em;
+    background-color: hsl(0, 94%, 66%);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 70px 0 rgba(0, 0, 0, 0.15);
+}
+
+#--login:hover{
+    color: hsl(0, 94%, 66%);
+    border: 2px solid hsl(0, 94%, 66%);
+    background-color: white;
+}

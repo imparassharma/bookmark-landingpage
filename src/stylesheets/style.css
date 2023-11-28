@@ -55,6 +55,11 @@ body{
     background-color: white;
     border: 2px solid hsl(231, 69%, 60%) ;
 }
+
+.hidden{
+    display: none !important;
+}
+
 /********************************************************Homepage**********************************************/
 
 .home-section{
@@ -275,7 +280,7 @@ body{
     width: 38%;
 }
 
-.faq-container .row{
+.faq-container .faqs{
     padding: 1.5em;
     border-top: 2px solid rgba(0, 0, 0, 0.105);
     border-bottom: 2px solid rgba(0, 0, 0, 0.105);
@@ -287,11 +292,26 @@ body{
     font-size: 1.3em;
 }
 
-.row{
+.faqs{
     display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.question-row{
+    display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+}
+
+.question-row h3{
+    width: 100%;
+}
+
+.question-row:hover h3{
+    color: hsl(0, 94%, 66%) !important;
 }
 
 .inner-row{
@@ -301,6 +321,14 @@ body{
 .faq-section #--moreinfo-btn{
     margin-top: 4em;
     width: 8%;
+}
+
+.answer-row p{
+    width: 100%;
+    text-align: left;
+    font-size: 1.2em;
+    margin-top: 2em;
+    line-height: 1.8em;
 }
 
 /**************************************************contact-section***********************************************************/
@@ -335,7 +363,7 @@ body{
 }
 
 .input-section input{
-    width: 30em;
+    width: 27em;
     padding: 1.3em;
     border-radius: 5px;
     border: none;
@@ -361,21 +389,44 @@ body{
     color: hsl(0, 94%, 66%);
 }
 
-.input{
+.warning-input{
+    display: flex;
+    padding: .6em .4em ;
+    flex-direction: column;
     background-color:hsl(0, 94%, 66%);
+    color: white;
+    font-size: .7em;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: -1.2em;
+    margin-top: -.5em;
+    border-radius: 0px 0px 5px 5px;
+    width: 95%;
+}
+
+.input-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-row img{
+    position: relative;
+    left: -2rem;
 }
 /*****************************footer-section**************************************/
 
 .footer-section{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 2em 12em;
+    justify-content: space-around;
+    padding: 2em 0em;
     background-color: hsl(229, 31%, 21%);
 }
 
 .footer-section .nav-section{
     justify-content: space-around;
+    margin-left: -10em;
     padding: 0;
 }
 

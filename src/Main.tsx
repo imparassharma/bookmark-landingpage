@@ -10,13 +10,15 @@ import feature3 from './images/illustration-features-tab-3.svg'
 import opera from './images/logo-opera.svg'
 import chrome from './images/logo-chrome.svg'
 import firefox from './images/logo-firefox.svg'
-import drop from './images/icon-arrow.svg'
+import dropdown from './images/icon-arrow.svg'
 import whitelogo from './images/logo-bookmark-white.svg'
 import facebook from './images/icon-facebook.svg'
 import twitter from './images/icon-twitter.svg'
+import warning from './images/icon-error.svg'
+import dropup from './images/icon-red-arrow.svg'
+import { transform } from 'typescript'
 
 const Main:React.FC=()=>{
-
 
     const handleFeature = (e:React.MouseEvent<HTMLElement>)=>{
         
@@ -37,16 +39,41 @@ const Main:React.FC=()=>{
 
     const handleEmail = (e:React.MouseEvent<HTMLElement>)=>{
         const email = document.getElementById('--email-input') as HTMLInputElement;
-        const warningInput = document.getElementById('warning-input');
+        const warningInput = document.getElementById('--warning-input');
+        const error = document.getElementById('--error-icon');
         let email_value = email.value;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         email_value = email_value.trim();
 
         if(!emailRegex.test(email_value)){
+            warningInput?.classList.remove('hidden');
             email.style.border = '2px solid red';
+            error?.classList.remove('hidden');
+        }
+        else{
+            warningInput?.classList.add('hidden');
+            email.style.border = '2px solid transparent';
+            error?.classList.add('hidden');
         }
 
     }
+
+    const handleFaq = (e: React.MouseEvent<HTMLElement>) => {
+        const answer = e.currentTarget.nextSibling as HTMLElement;
+        const arrowbtn = e.currentTarget.lastChild as HTMLImageElement;
+    
+        if (answer.classList.contains('hidden')) {
+            arrowbtn.src = dropup;
+            arrowbtn.style.transform = 'rotate(180deg)';
+        } else {
+            arrowbtn.src = dropdown;
+            arrowbtn.style.transform = 'rotate(0deg)';
+        }
+    
+        answer.classList.toggle('hidden'); // Toggle the visibility of the answer
+    };
+    
+    
 
     return(
         <div className="main-section">
@@ -57,7 +84,7 @@ const Main:React.FC=()=>{
 
                 <div className="leftSection-home">
                     <h1>A simple Bookmark Manager</h1>
-                    <p>A clean and simple interface to organize you favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+                    <p>A clean and simple interface to organize you favourite websites. Open a new bfaqsser tab and see your sites load instantly. Try it for free.</p>
                     <div className="buttons-home">
                         <button className='btn'>Get it on Chrome</button>
                         <button className='btn' id='--whiteBtn'>Get it on Firefox</button>
@@ -127,21 +154,42 @@ const Main:React.FC=()=>{
                 <h2>Frequently Asked Questions</h2>
                 <p>Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
                 <div className="faq-container">
-                    <div className="row">
-                        <h3>What is Bookmark?</h3>
-                        <img src={drop} alt='drop-icon' id='--ques1-dropdown'/>
+                    <div className="faqs">
+                        
+                        <div className="question-row" onClick={handleFaq}>
+                            <h3>What is Bookmark?</h3>
+                            <img src={dropdown} alt='drop-icon' id='--ques1-dropdown'/>
+                        </div>
+                        <div className="answer-row hidden">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus neque reiciendis possimus ex vel cumque, officia ipsum aliquam beatae eos eveniet, voluptate rem, corrupti iusto. At, consequatur quas? Facilis, fuga.</p>
+                        </div>
                     </div>
-                    <div className="row inner-row">
-                        <h3>How can I request a new browser?</h3>
-                        <img src={drop} alt='drop-icon' id='--ques2-dropdown'/>
+                    <div className="faqs inner-row">
+                        <div className="question-row" onClick={handleFaq}>
+                            <h3>How can I request a new bfaqsser?</h3>
+                            <img src={dropdown} alt='drop-icon' id='--ques2-dropdown'/>
+                        </div>
+                        <div className="answer-row hidden">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus neque reiciendis possimus ex vel cumque, officia ipsum aliquam beatae eos eveniet, voluptate rem, corrupti iusto. At, consequatur quas? Facilis, fuga.</p>
+                        </div>
                     </div>
-                    <div className="row inner-row">
-                        <h3>Is there a mobile app?</h3>
-                        <img src={drop} alt='drop-icon' id='--ques3-dropdown'/>
+                    <div className="faqs inner-row">
+                        <div className="question-row" onClick={handleFaq}>
+                            <h3>Is there a mobile app?</h3>
+                            <img src={dropdown} alt='drop-icon' id='--ques3-dropdown'/>
+                        </div>
+                        <div className="answer-row hidden">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus neque reiciendis possimus ex vel cumque, officia ipsum aliquam beatae eos eveniet, voluptate rem, corrupti iusto. At, consequatur quas? Facilis, fuga.</p>
+                        </div>
                     </div>
-                    <div className="row inner-row">
-                        <h3>What about chromium browsers?</h3>
-                        <img src={drop} alt='drop-icon' id='--ques4-dropdown'/>
+                    <div className="faqs inner-row">
+                        <div className="question-row" onClick={handleFaq}>
+                            <h3>What about other chromium browsers?</h3>
+                            <img src={dropdown} alt='drop-icon' id='--ques4-dropdown'/>
+                        </div>
+                        <div className="answer-row hidden">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus neque reiciendis possimus ex vel cumque, officia ipsum aliquam beatae eos eveniet, voluptate rem, corrupti iusto. At, consequatur quas? Facilis, fuga.</p>
+                        </div>
                     </div>
                 </div>
                 <button className='btn' id='--moreinfo-btn'>More Info</button>
@@ -151,9 +199,12 @@ const Main:React.FC=()=>{
                 <p>35,000+ ALREADY JOINED</p>
                 <h2>Stay up-to-date with what we're doing</h2>
                 <div className="input-section">
-                    <div className="input">
-                        <input placeholder='Enter your email address' id='--email-input' ></input>
-                        <div className="warning-input">Whoops, make sure it's an email.</div>
+                    <div className="input-box">
+                        <div className="input-row">
+                            <input placeholder='Enter your email address' id='--email-input' ></input>
+                            <img className='error hidden' src={warning} alt='error-icon' id='--error-icon'/>
+                        </div>
+                        <div className="warning-input hidden" id='--warning-input'>Whoops, make sure it's an email.</div>
                     </div>
                     <button className='btn' onClick={handleEmail}>Contact Us</button>
                 </div>

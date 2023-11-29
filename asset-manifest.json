@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bookmark-landingpage/static/css/main.f5ac3997.css",
+    "main.css": "/bookmark-landingpage/static/css/main.65e61962.css",
     "main.js": "/bookmark-landingpage/static/js/main.8ffdd2d7.js",
     "static/media/illustration-features-tab-3.svg": "/bookmark-landingpage/static/media/illustration-features-tab-3.a4206aab7946773b29b702492d2d014b.svg",
     "static/media/illustration-features-tab-2.svg": "/bookmark-landingpage/static/media/illustration-features-tab-2.e933bd6d921c537d7743e08ea4ec488e.svg",
@@ -21,11 +21,11 @@
     "static/media/icon-hamburger.svg": "/bookmark-landingpage/static/media/icon-hamburger.4385fd507d24f37ccbb3ae359b5c9555.svg",
     "static/media/icon-arrow.svg": "/bookmark-landingpage/static/media/icon-arrow.8174203a5d4fc44f5247b825de6e2158.svg",
     "static/media/icon-red-arrow.svg": "/bookmark-landingpage/static/media/icon-red-arrow.41bc50817aded7a32d774a62e273961e.svg",
-    "main.f5ac3997.css.map": "/bookmark-landingpage/static/css/main.f5ac3997.css.map",
+    "main.65e61962.css.map": "/bookmark-landingpage/static/css/main.65e61962.css.map",
     "main.8ffdd2d7.js.map": "/bookmark-landingpage/static/js/main.8ffdd2d7.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5ac3997.css",
+    "static/css/main.65e61962.css",
     "static/js/main.8ffdd2d7.js"
   ]
 }

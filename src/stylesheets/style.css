@@ -426,7 +426,10 @@ body{
     background-color: hsl(229, 31%, 21%);
 }
 
+    
 .footer-section .nav-section{
+    display: flex;
+    align-items: center;
     justify-content: space-around;
     margin-left: -10rem;
     padding: 0;

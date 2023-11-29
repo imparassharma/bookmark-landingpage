@@ -138,13 +138,3 @@
 .mobile-section .social-media{
     padding: 4em 0em;
 }
-
-@media screen and(max-width:1024px) {
-
-    .desktop-section{
-        display: none;
-    }
-
-    
-    
-}

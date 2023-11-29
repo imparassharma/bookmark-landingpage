@@ -4,7 +4,6 @@
 
 body{
     margin: 0;
-    width: 100vw;
     font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
 }
@@ -104,18 +103,20 @@ body{
 
 .rightSection-home{
     width: 50rem;
+    position: relative;
 }
 
 .rightSection-home img{
-    position: relative;
     width: 90%;
+    z-index: 1;
 }
 
 .overlay1{
-    width: 35%;
+    width: 80%;
     height: 23rem;
-    bottom: .5rem;
+    bottom: -2rem;
     right: 0;
+    z-index: -1;
 }
 
 /***************************************************************Features***********************************************/
@@ -135,7 +136,7 @@ body{
 .feature-row{
     display: flex;
     margin-top: 4em;
-    margin-bottom: 5em ;
+    margin-bottom: 3em ;
 }
 
 .feature-row h3{
@@ -156,6 +157,13 @@ body{
     border-bottom: 5px solid hsl(0, 94%, 66%);
 }
 
+.feature-page{
+    display: flex;
+    gap: 6em;
+    width: 100%;
+    min-height: 35rem;
+}
+
 .leftSection-feature{
     display: flex;
     align-items: center;
@@ -164,41 +172,35 @@ body{
     width: 50%;
 }
 
+.leftSection-feature img{
+    position: relative;
+    margin-left: 16rem;
+    width: 75%;
+}
+
 .overlay2{
-    width: 90%;
-    height: 23rem;
+    width: 80%;
+    height: 24rem;
     border-radius: 0px 0px 200px 0px;
     left: 0rem;
     z-index: -1;
-    top: 6rem;
-}
-
-.feature-page{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    gap: 8rem;
-}
-
-.feature-page img{
-    position: relative;
-    width: 75%;
-    margin-left: 10rem;
+    bottom: 0rem;
 }
 
 .rightSection-feature{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 40%;
 }
 
 .rightSection-feature p{
-    width: 65%;
+    width: 70%;
     margin-bottom: 2em;
 }
 
 #--moreinfo-btn{
-    width: 15%;
+    width: 8rem;
     padding: 1em .5em;
 }
 
@@ -438,9 +440,6 @@ body{
     display: none !important;
 }
 
-.footer-section .nav-bar{
-    width: 40%;
-}
 
 .social-media{
     display: flex;
@@ -451,4 +450,268 @@ body{
 
 .social-media img{
     cursor: pointer;
+}
+
+
+@media screen and (max-width:1024px) {
+    
+    .desktop-section{
+        display: none !important;
+    }
+
+    .mobile-section{
+        display: flex !important;
+    }
+
+    .main-section h2{
+        font-size: 2.8em;
+    }
+
+    .main-section p{
+        font-size: 1.8em;
+    }
+
+    .home-section{
+        flex-direction: column-reverse;
+        padding: 4em 0em 8em 0em;
+        gap: 6em;
+    }
+
+    .btn{
+        font-size: 2rem;
+    }
+
+    .rightSection-home{
+        width: 100%;
+    }
+
+    .overlay1{
+        height: 20rem;
+        bottom: 0rem;
+    }
+
+    .leftSection-home{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 4em;
+    }
+
+    .leftSection-home h1{
+        width: 80%;
+        text-align: center;
+        font-size: 4em;
+    }
+
+    .leftSection-home p{
+        width: 70%;
+        text-align: center;
+    }
+
+    .buttons-home{
+        gap: 3em;
+    }
+
+    .buttons-home .btn{
+        font-size: 1.5rem;
+    }
+
+    #feature-text{
+        width: 65%;
+    }
+
+    .feature-row{
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+        margin-bottom: 8em;
+    }
+
+    .feature-row h3{
+        font-size: 2em;
+        padding: 2rem 10rem 3rem 10rem
+    }
+
+    #--feature-bookmark{
+        border-top: 2px solid rgba(128, 128, 128, 0.215)
+    }
+
+    .feature-page{
+        flex-direction: column;
+    }
+
+    .leftSection-feature{
+        width: 100%;
+    }
+    
+    .leftSection-feature img{
+        width: 65%;
+        margin-left: -10rem;
+    }
+
+    .feature-page{
+        min-height: 40rem;
+    }
+
+    .overlay2{
+        bottom: -4rem;
+        width: 65%;
+    }
+
+    .rightSection-feature{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rightSection-feature p{
+        text-align: center;
+    }
+    
+    #--moreinfo-btn{
+        width: 12rem;
+    }
+
+    .download-section p{
+        width: 70%;
+    }
+
+    .download-row{
+        flex-direction: column;
+    }
+
+    .card{
+        padding: 5em 1em;
+    }
+
+    .card h3{
+        font-size: 2.5em;
+    }
+
+    .card img{
+        width: 12rem;
+    }
+
+    .download-section p{
+        margin-top: -0.5em;
+    }
+
+    .card .btn{
+        font-size: 1.7rem;
+    }
+
+    .dots-img{
+        width: 30rem !important;
+    }
+
+    .faq-section h2{
+        width: 50%;
+        text-align: center;
+    }
+
+    .faq-section p{
+        width: 70%;
+    }
+
+    .faq-container {
+        width: 80%;
+    }
+
+    .question-row h3{
+        font-size: 2em;
+    }
+
+    .faq-section .faqs{
+        padding: 2.5em;
+    }
+
+    .answer-row p{
+        width: 95%;
+    }
+
+    .faq-section #--moreinfo-btn{
+        width: 15rem;
+    }
+
+    .contact-section h2{
+        width: 80%;
+    }
+
+    .input-section{
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .input-row input{
+        padding: 1.4em;
+        width: 35rem;
+        font-size: 1.2em;
+    }
+
+    .warning-input{
+        font-size: 1em;
+        width: 96.5%;
+    }
+
+    .input-section .btn{
+        width: 35rem;
+        padding: 1em 2.5em;
+        font-size: 1.5em;
+    }
+
+    .footer-section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        padding: 4em 0em;
+    }
+
+    .footer-section .logo img{
+        width: 20rem;
+    }
+
+    .footer-section .nav-section{
+        flex-direction: column;
+        gap: 2em;
+        margin-left: 0;
+    }
+
+
+    .footer-section .nav-bar nav ul{
+        flex-direction: column;
+        font-size: 1.8em;
+    }
+
+    .footer-section #--list{
+        gap: 2em;
+    }
+
+    .footer-section .social-media{
+        gap: 4em;
+    }
+
+    .footer-section .social-media img{
+        width: 3rem;
+    }
+}
+
+@media screen and (max-width:574px) {
+
+    .input-row input{
+        width: 25rem;
+    }
+
+    .input-section .btn{
+        width: 25rem;
+    }
+    
+    .leftSection-feature img {
+        width: 85%;
+        margin-left: 0rem;
+    }
+
+    .overlay2{
+        height: 18rem;
+    }
 }

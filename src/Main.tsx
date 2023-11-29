@@ -35,6 +35,28 @@ const Main:React.FC=()=>{
             feature.style.borderBottom = "5px solid hsl(0, 94%, 66%)";
             feature.style.color = ' hsl(229, 31%, 21%)'
         }
+
+        const featuresection = e.currentTarget.parentElement?.nextSibling;
+        const featureImg = featuresection?.firstChild?.lastChild as HTMLImageElement;
+        const featureheading = featuresection?.lastChild?.firstChild as HTMLElement;
+        const featuretext = featureheading.nextSibling as HTMLElement;
+        console.log(featuretext);
+        if(e.currentTarget.innerHTML == 'Simple Bookmarking'){
+            featureImg.src= feature1;  //changing the image to tab1 if user selects bookmark tab
+            featureheading.innerHTML = 'Bookmark in one click'
+            featuretext.innerHTML = 'Organize your bookmark however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.'
+        }
+        else if(e.currentTarget.innerHTML == 'Speedy Searching'){
+            featureImg.src = feature2;
+            featureheading.innerHTML = 'Intelligent Search'
+            featuretext.innerHTML = 'Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.'
+        }
+        else{
+            featureImg.src = feature3;
+            featureheading.innerHTML = 'Share your bookmarks'
+            featuretext.innerHTML = 'Easily share your bookmarks and collections with others. Create a shareable link that you can send at a click of a button.'
+        }
+        
     }
 
     const handleEmail = (e:React.MouseEvent<HTMLElement>)=>{
@@ -129,21 +151,21 @@ const Main:React.FC=()=>{
                         <img src={chrome} alt='chrome-img'/>
                         <h3>Add to chrome</h3>
                         <p>Minimum version 62</p>
-                        <img src={dots}/>
+                        <img className='dots-img' src={dots}/>
                         <button className='btn'>Add & Install Extension</button>
                     </div>
                     <div className="card2 card">
                         <img src={firefox} alt='firefox-mg'/>
                         <h3>Add to Firefox</h3>
                         <p>Minimum version 55</p>
-                        <img src={dots}/>
+                        <img className='dots-img' src={dots}/>
                         <button className='btn'>Add & Install Extension</button>
                     </div>
                     <div className="card3 card">
                         <img src={opera} alt='opera-img'/>
                         <h3>Add to Opera</h3>
                         <p>Minimum version 46</p>
-                        <img src={dots}/>
+                        <img className='dots-img' src={dots}/>
                         <button className='btn'>Add & Install Extension</button>
                     </div>
                 </div>
